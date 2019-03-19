@@ -1,0 +1,13 @@
+a = float(input('Digite o coeficiente líder: '))
+b = float(input('Digite o coeficiente do termo do primerio grau: '))
+c = float(input('Digite o coeficiente independente: '))
+
+if(b*b<4*a*c):
+    print("Não possui raiz real .")
+elif(b*b==4*a*c):
+    print("A única raiz real é ", -b/2*a, ".")
+else:
+    delta = (b*b-4*a*c)**0.5
+    R_1 = (-b - delta)/(2*a)
+    R_2 = (-b + delta)/(2*a)
+    print("As raizes reais são", R_1, "e", R_2, ".")
