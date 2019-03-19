@@ -1,0 +1,22 @@
+a = int(input('Digite quantas coordenadas tem seus vetores: '))
+
+Vetor1 = []
+Vetor2 = []
+Vetor3 = []
+
+for i in range(0, a, 1):
+    print("Digite a", i+1, "ª coordenada do primeiro vetor: ", end="")
+    b = int(input())
+    Vetor1.append(b)
+
+for i in range(0, a, 1):
+    print("Digite a", i+1, "ª coordenada do segundo vetor: ", end="")
+    b = int(input())
+    Vetor2.append(b)
+
+print("O vetor resultante é (", end="")
+for i in range(0, a-1, 1):
+    Vetor3.append(Vetor1[i] + Vetor2[i])
+    print(Vetor3[i], ",", end="")
+Vetor3.append(Vetor1[a-1] + Vetor2[a-1])
+print(Vetor3[a-1], ")")
