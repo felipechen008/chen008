@@ -1,0 +1,10 @@
+a = int(input('Digite quantos múltiplos você quer: '))
+b = int(input('Digite o valor de X: '))
+c = int(input('Digite o valor de Y: '))
+d = 0
+i = 0
+while d<=a:
+    i=i+1
+    if(i%b==0 or i%c==0):
+        d=d+1
+        print(i)
