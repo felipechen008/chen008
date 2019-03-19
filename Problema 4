@@ -1,22 +1,22 @@
-a = int(input('Digite quantas coordenadas tem seus vetores: '))
-
-Vetor1 = []
-Vetor2 = []
-Vetor3 = []
-
+a = int(input('Digite quantos postos existem: '))
+n = int(input('Digite qual a distância máxima(em km) da sua localização que os postos podem estar: '))
+x = int(input('Digite a coordenada X da sua localização: '))
+y = int(input('Digite a coordenada Y da sua localização: '))
+Vetor = []
 for i in range(0, a, 1):
-    print("Digite a", i+1, "ª coordenada do primeiro vetor: ", end="")
+    print("Digite a coordenada X do ", i+1, "º posto ", end="")
     b = int(input())
-    Vetor1.append(b)
-
-for i in range(0, a, 1):
-    print("Digite a", i+1, "ª coordenada do segundo vetor: ", end="")
-    b = int(input())
-    Vetor2.append(b)
-
-print("O vetor resultante é (", end="")
-for i in range(0, a-1, 1):
-    Vetor3.append(Vetor1[i] + Vetor2[i])
-    print(Vetor3[i], ",", end="")
-Vetor3.append(Vetor1[a-1] + Vetor2[a-1])
-print(Vetor3[a-1], ")")
+    print("Digite a coordenada Y do ", i+1, "º posto ", end ="")
+    c = int(input())
+    if(((x-b)**2 + (y-c)**2)**0.5<=n):
+        Vetor.append(i+1)
+e = len(Vetor)
+if(e==0):
+    print("Não há postos no raio de", n, "km da sua localização")
+if(e==1):
+    print("O posto no raio de", n, "km da sua localização é :")
+    print(Vetor[0])
+if(e>1):
+    print("Os postos no raio de", n, "km da sua localização são :")
+    for i in range(0, e, 1):
+        print(Vetor[i])
